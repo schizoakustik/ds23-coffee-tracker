@@ -30,6 +30,7 @@ function set_color(loc) {
         'http://schizoakustik.se:8023/location', 
         {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
