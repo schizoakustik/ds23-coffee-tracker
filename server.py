@@ -21,4 +21,4 @@ def location():
             return str(e)
 
 if __name__ == '__main__':
-    app.run(port=8023)
+    app.run('0.0.0.0', port=8023)
