@@ -2,9 +2,8 @@ var colors = {yellow: "#FFE8A1", red: "#FFBDA1", blue: "#A7D7FF"}
 var body = document.getElementsByTagName("body")[0];
 var boxes = document.getElementById("boxes");
 
-const response = await fetch('http://0.0.0.0:8023/location', {method: "GET"})
+const response = await fetch('http://schizoakustik.se:8023/location', {method: "GET"})
 data = await response.json()
-
 
 body.style.background = colors[data.currentLocation];
 
@@ -28,7 +27,7 @@ function set_color(loc) {
     var newLocation = loc
     body.style.background = colors[newLocation]
     fetch(
-        'http://00.0.0.0:8023/location', 
+        'http://schizoakustik.se:8023/location', 
         {
             method: 'POST',
             headers: {
