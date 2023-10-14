@@ -1,7 +1,9 @@
 from flask import Flask, request, render_template, make_response
+from flask_cors import CORS
 import json
 
 app = Flask(__name__)
+CORS(app=app, origins=['http://192.168.0.100'])
 
 @app.route('/')
 def index():
