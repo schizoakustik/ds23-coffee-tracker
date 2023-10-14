@@ -3,7 +3,7 @@ var body = document.getElementsByTagName("body")[0];
 var boxes = document.getElementById("boxes");
 
 const response = await fetch('http://schizoakustik.se:8023/location', {method: "GET"})
-data = await response.json()
+var data = await response.json()
 
 body.style.background = colors[data.currentLocation];
 
