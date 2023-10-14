@@ -2,7 +2,7 @@ var colors = {yellow: "#FFE8A1", red: "#FFBDA1", blue: "#A7D7FF"}
 var body = document.getElementsByTagName("body")[0];
 var boxes = document.getElementById("boxes");
 
-const response = await fetch('http://localhost:5000/location', {method: "GET"})
+const response = await fetch('http://192.168.0.100:8023/location', {method: "GET"})
 data = await response.json()
 
 
@@ -28,7 +28,7 @@ function set_color(loc) {
     var newLocation = loc
     body.style.background = colors[newLocation]
     fetch(
-        'http://localhost:5000/location', 
+        'http://192.168.0.100:8023/location', 
         {
             method: 'POST',
             headers: {
