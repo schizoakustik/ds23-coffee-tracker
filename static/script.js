@@ -2,8 +2,6 @@ var colors = {yellow: "#FFE8A1", red: "#FFBDA1", blue: "#A7D7FF"}
 var body = document.getElementsByTagName("body")[0];
 var boxes = document.getElementById("boxes");
 
-var data = {currentLocation: 'red'}
-
 const response = await fetch('http://localhost:5000/location', {method: "GET"})
 data = await response.json()
 
