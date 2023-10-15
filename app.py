@@ -3,7 +3,7 @@ from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-CORS(app=app, origins=['http://192.168.0.100:8023'])
+CORS(app=app, resources={r'/location': {'origins': '*'}})
 
 @app.route('/')
 def index():
